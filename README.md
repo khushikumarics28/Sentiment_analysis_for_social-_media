@@ -118,7 +118,4 @@ README.md              # Documentation
 
 ---
 
-## 📌 Author
 
-**Md Imran Ansari**
-GitHub: https://github.com/mdimran2211
