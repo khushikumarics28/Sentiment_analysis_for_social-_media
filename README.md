@@ -1,103 +1,85 @@
 # 🚀 Sentiment Analyzer Pro: Social Media Trend Analysis
 
 ### 🌐 Live Demo
+👉 [Click here to view the Live Application](https://sentimentanalysisforsocial-media-ndhrt5vjgpvczhuwdvu9by.streamlit.app/)
 
-👉https://sentimentanalysisforsocial-media-ndhrt5vjgpvczhuwdvu9by.streamlit.app/
 ---
 
 ## 📝 Project Overview
+**Sentiment Analyzer Pro** is a sophisticated Machine Learning application designed to bridge the gap between raw social media noise and actionable emotional intelligence. Built using **Support Vector Machines (SVM)** and **TF-IDF Vectorization**, this tool provides a robust framework for classifying the tone of digital conversations.
 
-**Sentiment Analyzer Pro** is a Machine Learning application that transforms raw social media text into actionable insights. Using **Support Vector Machines (SVM)** and modern **Natural Language Processing (NLP)** techniques, it classifies unstructured text into three categories: **Positive, Negative, and Neutral**.
-
-This project demonstrates how sentiment analysis can be applied to understand public opinion for use cases like brand monitoring, product feedback, and social trend analysis.
+Whether it’s monitoring brand reputation or analyzing shifting social trends, this application offers a high-speed, scalable solution for processing unstructured text data.
 
 ---
 
 ## ✨ Key Features
 
-* **📝 Manual Text Analysis**
-  Instantly analyze sentiment for any custom input.
-
-* **🌐 Topic-Based Sentiment Analysis**
-  Evaluate sentiment trends for specific keywords or topics.
-
-* **📊 Data Visualization**
-
-  * WordClouds for frequently used terms
-  * Sentiment distribution charts
-
-* **⚡ Optimized ML Pipeline**
-  TF-IDF vectorization for better context understanding over simple word counts.
+* **📝 Real-Time Prediction:** Enter any text snippet and get instant sentiment classification (Positive, Negative, or Neutral).
+* **📈 Keyword Trend Analysis:** Analyze sentiments associated with specific topics or hashtags to understand public discourse.
+* **🎨 Dynamic Data Visualization:**
+    * **WordClouds:** Visualize dominant keywords.
+    * **Sentiment Charts:** Interactive bar and pie charts showing distribution.
+* **⚡ Optimized ML Pipeline:** Features a custom-built NLP pipeline that focuses on semantic relevance rather than just keyword matching.
+* **📱 Responsive UI:** A clean, minimalist dashboard built with Streamlit for seamless user experience across devices.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** Streamlit
-* **Language:** Python
-* **Machine Learning:** Scikit-learn (SVM)
-* **NLP:** NLTK
-* **Data Processing:** Pandas, NumPy
+* **Language:** Python 3.9+
+* **Frontend:** Streamlit (Custom CSS for Modern UI)
+* **Backend:** Flask API (Integration Layer)
+* **Machine Learning:** Scikit-learn (SVM Classifier)
+* **NLP:** NLTK, Regular Expressions (RegEx)
+* **Data Science:** Pandas, NumPy
+* **Visualization:** Matplotlib, Seaborn, WordCloud
 
 ---
 
 ## ⚙️ Model Pipeline
 
-1. **Data Preprocessing**
-
-   * Lowercasing, cleaning, stopword removal
-   * Stemming using NLTK
-
-2. **Feature Extraction**
-
-   * TF-IDF Vectorization
-   * N-grams for better context capture
-
-3. **Model Training**
-
-   * Support Vector Machine (Linear Kernel)
-   * Balanced class weights for fair predictions
-
-4. **Evaluation**
-
-   * Accuracy, Precision, Recall, F1-score
+1.  **Data Preprocessing**
+    * Noise reduction: Removal of URLs, user mentions (@), and hashtags.
+    * Text Normalization: Lowercasing and removal of punctuation.
+    * Tokenization: Converting sentences into individual word tokens.
+2.  **Feature Engineering**
+    * **TF-IDF Vectorization:** Assigning weights to words based on their importance across the dataset.
+    * **N-gram Modeling:** Capturing context (e.g., "not good" vs "good").
+3.  **Model Architecture**
+    * **Algorithm:** Support Vector Machine (SVM).
+    * **Accuracy:** Achieved a balanced performance optimized for social media slang.
+4.  **Deployment**
+    * Containerized for cloud hosting via Streamlit Cloud.
 
 ---
 
-## 🚀 Run Locally
+## 🚀 Installation & Local Setup
 
-### 1. Clone Repository
-
+### 1. Clone the Repository
 ```bash
-git clone https://github.com/khushikumarics28/Sentiment_analysis_for_social-_media.git
+git clone [https://github.com/khushikumarics28/Sentiment_analysis_for_social-_media.git](https://github.com/khushikumarics28/Sentiment_analysis_for_social-_media.git)
+```
 cd Sentiment_analysis_for_social-_media
+### 2. model training (any terminal)
+
+bash
+```sql
+python train_model.py
 ```
 
-### 2. Install Dependencies
+### 3. Run backend (terminal_1)
 
-```bash
-pip install -r requirements.txt
+bash
+```sql
+python backend.py
 ```
+### 3. Run frontend.py (terminal_2)
 
-### 3. Run Application
-
-```bash
-streamlit run app.py
+bash
+```sql
+streamlit run frontend.py
 ```
-
 ---
-
-## 📂 Project Structure
-
-```
-app.py                  # Main Streamlit application
-sentimentdataset.csv   # Dataset used for training
-requirements.txt       # Dependencies
-README.md              # Documentation
-```
-
----
-
 ## 👥 Team Members
 
 | Name             | Role                          |
@@ -109,13 +91,3 @@ README.md              # Documentation
 | Krishna Bajpai   | Documentation & Research      |
 
 ---
-
-## 🔐 Security Notes
-
-* Do not upload sensitive files (e.g., `.env`)
-* Keep API keys private
-* Use environment variables or secrets for deployment
-
----
-
-
